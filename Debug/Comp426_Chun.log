@@ -1,0 +1,13 @@
+﻿  main.cpp
+c:\users\coen038\desktop\comp426_chun\comp426_chun\main.cpp(18): warning C4018: '<': signed/unsigned mismatch
+c:\users\coen038\desktop\comp426_chun\comp426_chun\main.cpp(20): warning C4018: '<': signed/unsigned mismatch
+c:\users\coen038\desktop\comp426_chun\comp426_chun\main.cpp(24): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\coen038\desktop\comp426_chun\comp426_chun\main.cpp(25): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\coen038\desktop\comp426_chun\comp426_chun\main.cpp(26): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\coen038\desktop\comp426_chun\comp426_chun\main.cpp(40): warning C4018: '<': signed/unsigned mismatch
+c:\users\coen038\desktop\comp426_chun\comp426_chun\main.cpp(44): warning C4018: '<': signed/unsigned mismatch
+c:\users\coen038\desktop\comp426_chun\comp426_chun\main.cpp(58): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\coen038\desktop\comp426_chun\comp426_chun\main.cpp(81): warning C4018: '>=': signed/unsigned mismatch
+c:\users\coen038\desktop\comp426_chun\comp426_chun\main.cpp(86): warning C4018: '>=': signed/unsigned mismatch
+  Comp426_Chun.vcxproj -> C:\Users\COEN038\Desktop\Comp426_Chun\Debug\Comp426_Chun.exe
+  Comp426_Chun.vcxproj -> C:\Users\COEN038\Desktop\Comp426_Chun\Debug\Comp426_Chun.pdb (Partial PDB)
