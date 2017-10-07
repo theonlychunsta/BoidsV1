@@ -37,7 +37,9 @@ void Boid::updatePosition(std::vector<Boid>* m, int boidIndex)
 		m->at(boidIndex).Velocity.Y = 0.01f;
 	}
 
-	limitVelocity(m->at(boidIndex));
+
+	m->at(boidIndex).Velocity.X = limitVelocity(m->at(boidIndex)).X;
+	m->at(boidIndex).Velocity.Y = limitVelocity(m->at(boidIndex)).Y;
 
 	m->at(boidIndex).Coordinate.X += m->at(boidIndex).Velocity.X;
 	m->at(boidIndex).Coordinate.Y += m->at(boidIndex).Velocity.Y;
@@ -76,7 +78,7 @@ Position Boid::distanceAway(std::vector<Boid> m, int boidIndex)
 			float someVelocityX = m[i].Coordinate.X - m[boidIndex].Coordinate.X;
 			float someVelocityY = m[i].Coordinate.Y - m[boidIndex].Coordinate.Y;
 
-			if (sqrt(someVelocityX * someVelocityX + someVelocityY * someVelocityY) < 0.01)
+			if (sqrt(someVelocityX * someVelocityX + someVelocityY * someVelocityY) < 0.05)
 			{
 				distance.X = distance.X - (m[i].Coordinate.X - m[boidIndex].Coordinate.X);
 				distance.Y = distance.Y - (m[i].Coordinate.Y - m[boidIndex].Coordinate.Y);
@@ -120,6 +122,11 @@ Position Boid::limitVelocity(Boid& m)
 	{
 		limitedVelocity.X = m.Velocity.X / norm * vLimit;
 		limitedVelocity.Y = m.Velocity.Y / norm * vLimit;
+	}
+	else
+	{
+		limitedVelocity.X = m.Velocity.X;
+		limitedVelocity.Y = m.Velocity.Y;
 	}
 
 	return limitedVelocity;

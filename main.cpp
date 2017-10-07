@@ -3,7 +3,7 @@
 #include <GL\freeglut.h>
 #include <vector>
 #include <cstdlib>
-
+#include <stdlib.h>
 #include <ctime>
 #include <iostream>
 #include <thread>
@@ -23,9 +23,9 @@ void draw()
 		{
 			glColor3b(flockList[i].r, flockList[i].g, flockList[i].b);
 			glBegin(GL_TRIANGLES);
-			glVertex2f(flockList[i].boids[j].Coordinate.X, flockList[i].boids[j].Coordinate.Y + 0.005);
+			glVertex2f(flockList[i].boids[j].Coordinate.X, flockList[i].boids[j].Coordinate.Y + 0.01);
 			glVertex2f(flockList[i].boids[j].Coordinate.X - 0.005, flockList[i].boids[j].Coordinate.Y - 0.005);
-			glVertex2f(flockList[i].boids[j].Coordinate.X + 0.005, flockList[i].boids[j].Coordinate.Y + 0.005);
+			glVertex2f(flockList[i].boids[j].Coordinate.X + 0.005, flockList[i].boids[j].Coordinate.Y - 0.005);
 			glEnd();
 		}
 
@@ -60,8 +60,8 @@ int main(int ptr, char** charptr)
 	srand((time(0)));
 
 
-	int numberOfFlocks = 7;
-	int numberOfBoids = 10;
+	int numberOfFlocks = 5;
+	int numberOfBoids = 5;
 
 
 	// GENERATE THE FLOCKS AND THE BOIDS.
